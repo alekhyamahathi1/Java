@@ -3,17 +3,23 @@ import java.util.*;
 
 
 class arrayInput {
-    public void sortColors(int[] nums) {
-        Scanner myObj = new Scanner(System.in);
-        int n[] = myObj.nextInt();
+public static void main (String[] args) {
 
-        int[] nums = new int[n]; 
+Scanner myObj = new Scanner(System.in);
+System.out.print("Enter the size of the array: ");
 
-         for (int i = 0; i < n; i++) {
-            nums[i] = myObj.nextInt(); 
-            }
-            System.out.println(Arrays.nums());
-            myObj.close();
+int size = myObj.nextInt();
+int[] inputArray = new int[size];
+
+for (int i = 0; i < size ; i++) {
+System.out.print("Number at index " + i + " = " );
+inputArray[i] = myObj.nextInt(); }
+
+System.out.println("Array elements are: ");
+for(int i = 0; i < size ; i++ ) {
+System.out.print(inputArray[i] + ", ");}
+System.out.println(" ");
+myObj.close();
         
     } 
 }  
