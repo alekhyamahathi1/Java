@@ -2,46 +2,55 @@ import java.util.*;
 
 public class checkPrime {
 
-	public static boolean checker(int upperLimit) {
-		boolean Number = false;
+	public static void checker(int upperLimit) {
 
 		if(upperLimit < 2) {
-		System.out.println(""There are no prime numbers up to " + upperLimit + ".");
-		return; }
+		System.out.println("There are no prime numbers up to " + upperLimit + ".");
+		return;
+	 	}
 
 		boolean[] isPrime = new boolean[upperLimit + 1];
-		Arrays.fill(isPrime, true); 
+		Arrays.fill(isPrime, true);
+		
+		System.out.println("Non Prime numbers from the range are: ");
 
-      if (upperLimit >= 0) isPrime[0] = false;
-      if (upperLimit >= 1) isPrime[1] = false;
+      if (upperLimit >= 0) {
+			isPrime[0] = false;
+			System.out.println("0 is not prime"); }
 
-		for(int i = 2; i = Math.sqrt(upperLimit) {
-      		return true;  } 
+      if (upperLimit >= 1) {
+			isPrime[1] = false;
+			System.out.println("1 is not prime"); }
+	   
+		for (int i = 2; i*i <= upperLimit; i++) {
+			if(isPrime[i]){
 
-		if(int i = 3) {
-			return true;  } 
+				for (int j = i*i; j <= upperLimit; j+= i){
+						isPrime[j] = false;
+						System.out.println(j + " is not prime");  
+				}
+		 	}
+		}
 
-		if(int i % 2 = 0) {
-			return false; }
+		System.out.println("Prime numbers from the range are: ");
 
-		for(int j = 3; j = Math.sqrt(upperLimit); j+= 2) {
-			if (i % j == 0) {
-				return false; } } }
+		for (int i = 2; i <= upperLimit; i++) {
+			if(isPrime[i]){
+			System.out.println(i + " is prime");
 
-			return true;
+			}
+		} 
+	}
 
-} }
 	public static void main (String [] args) {
 		Scanner myObj = new Scanner (System.in);
 
-		System.out.println("Entire the upper limit of the range to check for prime: ");
+		System.out.println("Enter the upper limit of the range to check for prime: ");
 		int upperLimit = myObj.nextInt();
 
-		if( checker(upperLimit) ) {
-			System.out.println(Number); } 
+			checker(upperLimit);
 
-		else {
-			Syetem.out.println(Number);}
-
+			myObj.close();
 		
-} }
+	}
+}
