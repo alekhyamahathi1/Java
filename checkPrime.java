@@ -1,5 +1,7 @@
 import java.util.*;
 
+//using Seive of Eratosthenes algorithm
+
 public class checkPrime {
 
 	public static void checker(int upperLimit) {
