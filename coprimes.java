@@ -17,7 +17,7 @@ public class coprimes {
 				arrayOfB.add(j); 
 			}
 		}
-
+		
 		ArrayList<Integer> cdOfAB = new ArrayList<>();
 			for (int divisorA : arrayOfA) {
 				if (arrayOfB.contains(divisorA)) {
@@ -25,7 +25,7 @@ public class coprimes {
             		}
       		  }
 
-         return cdOfAB.isEmpty() ? 1 : Collections.max(cdOfAB);
+         return cdOfAB.isEmpty() ? 1 : Collections.min(cdOfAB);
 	}
 
 	public static void main (String [] args) {
