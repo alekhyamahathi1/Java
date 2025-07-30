@@ -9,7 +9,9 @@ public class gcd {
 			a = temp; 
 		}
 
-		return a;
+		if (a = 1) {
+			
+		}
 
 	}
 
