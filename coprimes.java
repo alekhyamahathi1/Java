@@ -2,17 +2,17 @@ import java.util.*;
 
 public class coprimes {
 
-	public static int gcd(int a, int b){ 
+	public static void coprime(int a, int b){ 
 	
 		ArrayList<Integer> arrayOfA = new ArrayList<>();
-		for (int i = 1; i <= a; i++) {
+		for (int i = 1; i < a; i++) {
 			if(a%i == 0) {
 				arrayOfA.add(i);
 			} 
 		}
 
 		ArrayList<Integer> arrayOfB = new ArrayList<>();
-		for (int j = 1; j <= b; j++) {
+		for (int j = 1; j < b; j++) {
 			if(b%j == 0) {
 				arrayOfB.add(j); 
 			}
@@ -25,7 +25,10 @@ public class coprimes {
             		}
       		  }
 
-         return cdOfAB.isEmpty() ? 1 : Collections.min(cdOfAB);
+         if (cdOfAB.size() == 1) {
+											System.out.println(a + " and " + b + " are coprimes");
+									} else { System.out.println(a + " and " + b + " are not coprimes"); }
+										return;
 	}
 
 	public static void main (String [] args) {
@@ -38,7 +41,7 @@ public class coprimes {
 		System.out.print("Enter the value of b : ");
 		int b = myObj.nextInt();
 
-		System.out.println("The GCD of the input values = " + gcd(a,b));
+	coprime(a,b);
 
 		myObj.close();
 	}
