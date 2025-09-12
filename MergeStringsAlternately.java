@@ -1,6 +1,6 @@
 import java.util.Scanner; 
 
-class Solution {
+class MergeStringsAlternately {
     public static String mergeAlternately(String word1, String word2) {
         StringBuilder merged = new StringBuilder();
 
